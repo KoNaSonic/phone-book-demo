@@ -11,19 +11,18 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 
-@Table(name = "users")
+@Table(name = "phone_numbers")
 
-public class User {
+public class PhoneNumber {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @ManyToOne
+    private User user;
+
     private LocalDateTime createdDate;
 
-    private String fullName;
-
-    @Column (unique = true)
-    private String email;
-
+    private String phoneNumber;
 }
