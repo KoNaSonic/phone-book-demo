@@ -3,7 +3,7 @@ package com.telran.demo.model.dto;
 import lombok.*;
 import org.hibernate.validator.constraints.Length;
 
-import javax.validation.constraints.Email;
+
 import javax.validation.constraints.NotBlank;
 
 
@@ -11,16 +11,21 @@ import javax.validation.constraints.NotBlank;
 @NoArgsConstructor
 @Data
 
-public class UserDto {
-
+public class AddressDto {
 
     @NotBlank
-    @Length(min = 2, max = 50)
-    private String fullName;
+    private String country;
 
-    @Email
     @NotBlank
-    private String email;
+    private String city;
 
+    @NotBlank
+    private String street;
+
+    @NotBlank
+    private String houseNumber;
+
+    @NotBlank
+    private String apartment;
 
 }

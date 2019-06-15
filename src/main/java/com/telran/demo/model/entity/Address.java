@@ -5,11 +5,13 @@ import lombok.*;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
+@Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 @Getter
 @Setter
+@Builder
 
 @Table(name = "addresses")
 

@@ -11,16 +11,10 @@ import javax.validation.constraints.NotBlank;
 @NoArgsConstructor
 @Data
 
-public class UserDto {
-
+public class PhoneNumberDto {
 
     @NotBlank
-    @Length(min = 2, max = 50)
-    private String fullName;
-
-    @Email
-    @NotBlank
-    private String email;
+    private String phoneNumber;
 
 
 }
